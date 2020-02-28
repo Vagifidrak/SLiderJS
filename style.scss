@@ -1,0 +1,59 @@
+#slider{
+position: relative;
+height: 80vh;
+overflow: hidden;
+
+//button start
+
+#btnLeft,#btnRight{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    }
+    #btnLeft{
+        left: 25px;
+    }
+    #btnRight{
+        right: 25px;
+    }
+    
+    //button end
+
+
+    // slider start
+    .sliderItem{
+        height: 80vh;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        visibility: hidden;
+        opacity: 0;
+        transform: scale(3);
+    &.active{
+        visibility: visible;
+        opacity: 1;
+        left: 0;
+        transition: .5s;
+        transform: scale(1);
+    }
+
+        &:nth-child(1){
+            background-image: url(image/cappa.jpg);
+            background-size: cover;
+        }
+        &:nth-child(2){
+            background-image: url(image/disc-aze.jpg);
+            background-size: cover;
+        }
+        &:nth-child(3){
+            background-image: url(image/discover-azerbaijan.jpg);
+            background-size: cover;
+        }
+        &:nth-child(4){
+            background-image: url(image/DiscoverAzerbaijan.jpg);
+            background-size: cover;
+        }
+    // slider end
+    }
+}
